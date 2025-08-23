@@ -261,10 +261,15 @@
   </script>
 
   <!-- BANNER IMAGE -->
-  <div class="banner-img" style="max-width:900px; margin:2rem auto 0 auto;">
-    <img src="Images/home.png" alt="Home Banner">
+
+
+  <section class="banner">
+  <div class="banner-img">
+    <img src="Images/home.png" alt="Illustration representing the theme of exposing hidden truths">
     <div class="banner-text">Exposing Hidden Truths</div>
   </div>
+</section>
+
 
   <!-- MAIN SECTION -->
   <section style="max-width:900px; margin:2rem auto; background:#E7E7E7; border-radius:16px; box-shadow:0 4px 32px #b8860b22; padding:2rem; color:#1a2a2a;">
@@ -359,3 +364,24 @@
       });
   </script>
   <section>
+      <div id="homesection2-container"></div>
+  <script>
+    fetch('homesection2.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('homesection2-container').innerHTML = html;
+      });
+  </script>
+  </section>
+  </section>
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('footer-container').innerHTML = html;
+      });
+  </script>
+</body>
+</html>
