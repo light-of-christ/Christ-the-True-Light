@@ -126,5 +126,14 @@
       <p>All downloads on my website are completely free of charge. However, donations are greatly appreciated to support my work. Whether you're a student or a seasoned philosophy enthusiast, you'll discover valuable insights woven into everyday articles.</p>
     </div>
   </div>
+    <div id="homesection2-container"></div>
+  <script>
+    fetch('homesection2.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('homesection2-container').innerHTML = html;
+      });
+  </script>
+
 </body>
 </html>
