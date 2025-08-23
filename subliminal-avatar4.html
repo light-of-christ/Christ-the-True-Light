@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f7f7f7;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .blog-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: 1400px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 18px 32px 18px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .blog-card:hover {
+      box-shadow: 0 8px 32px rgba(44,76,130,0.18);
+      transform: translateY(-6px) scale(1.03);
+    }
+    .blog-image {
+      width: 100%;
+      max-width: 220px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      background: #eee;
+    }
+    .blog-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #14424a;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .blog-desc {
+      font-size: 1rem;
+      color: #37474f;
+      text-align: center;
+      line-height: 1.6;
+    }
+    @media (max-width: 1100px) {
+      .blog-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 700px) {
+      .blog-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-list">
+    <div class="blog-card">
+      <img class="blog-image" src="Images/blog1.jpg" alt="Blog 1">
+      <div class="blog-title">Blog Title One</div>
+      <div class="blog-desc">This is a short description for the first blog post. It gives a quick summary of the content.</div>
+    </div>
+    <div class="blog-card">
+      <img class="blog-image" src="Images/blog2.jpg" alt="Blog 2">
+      <div class="blog-title">Blog Title Two</div>
+      <div class="blog-desc">This is a short description for the second blog post. It gives a quick summary of the content.</div>
+    </div>
+    <div class="blog-card">
+      <img class="blog-image" src="Images/blog3.jpg" alt="Blog 3">
+      <div class="blog-title">Blog Title Three</div>
+      <div class="blog-desc">This is a short description for the third blog post. It gives a quick summary of the content.</div>
+    </div>
+    <div class="blog-card">
+      <img class="blog-image" src="Images/blog4.jpg" alt="Blog 4">
+      <div class="blog-title">Blog Title Four</div>
+      <div class="blog-desc">This is a short description for the fourth blog post. It gives a quick summary of the content.</div>
+    </div>
+  </div>
+</body>
+</html>
