@@ -259,6 +259,19 @@
     <button class="youtube">YOUTUBE CHANNEL</button>
   </nav>
 
-<body>
+  <div id="homeimage-container"></div>
 
-<html>
+<script>
+  fetch('homeimage.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load homeimage.html');
+      }
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('homeimage-container').innerHTML = html;
+    });
+</script>
+</body>
+</html>
