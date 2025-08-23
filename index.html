@@ -150,6 +150,22 @@
         document.getElementById('homesection4-container').innerHTML = html;
       });
   </script>
+      <div id="tshirtad-container"></div>
+  <script>
+    fetch('tshirtad.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('tshirtad-container').innerHTML = html;
+      });
+  </script>
+      <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('footer-container').innerHTML = html;
+      });
+  </script>
   
 
 </body>
