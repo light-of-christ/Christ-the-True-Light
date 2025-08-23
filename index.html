@@ -234,37 +234,14 @@
 
 <body>
   <!-- HEADER -->
-  <div class="topbar">
-    <span><span class="check">✔</span> Biblical Truths</span>
-    <span><span class="check">✔</span> Prophecy Revelations</span>
-    <span><span class="check">✔</span> Mental Health Awareness</span>
-    <span><span class="check">✔</span> The Cure For Schizophrenia</span>
-    <span><span class="check">✔</span> Voices In Your Head</span>
-  </div>
-  <div class="site-title">Christ the True Light</div>
-  <nav class="nav">
-    <a href="#" class="active">HOME</a>
-    <a href="#">STORE</a>
-    <a href="#">SUBLIMINAL AVATAR</a>
-    <a href="#">RELOCATE THE SINNERS</a>
-    <a href="#">BLOG</a>
-    <a href="#">VOICES OF STRENGTH</a>
-    <a href="#">SCHIZOPHRENIC PROPHETS</a>
-    <a href="#">JOHN WYCLIFFE - WYC BOOKS</a>
-    <a href="#">PHOTO GALLERY</a>
-    <a href="#">DOWNLOAD ARCHIVE</a>
-    <a href="#">CONTACT</a>
-    <a href="#">PRIVACY POLICY</a>
-    <input class="search" type="text" placeholder="Search">
-    <button class="youtube">YOUTUBE CHANNEL</button>
-  </nav>
 
-  <!-- Remove dynamic fetch for homeimage.html and restore static banner markup -->
-  <section class="banner" style="display:flex; justify-content:center; align-items:center; margin:2rem 0;">
-    <div class="banner-img">
-      <img src="Images/home.png" alt="Illustration representing the theme of exposing hidden truths">
-      <div class="banner-text">Exposing Hidden Truths</div>
-    </div>
-  </section>
+  <div id="header-container"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('header-container').innerHTML = html;
+      });
+  </script>
 </body>
 </html>
