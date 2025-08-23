@@ -240,7 +240,6 @@
 
 <body>
   <!-- HEADER -->
-
   <div id="header-container"></div>
   <script>
     fetch('header.html')
@@ -249,8 +248,12 @@
         document.getElementById('header-container').innerHTML = html;
       });
   </script>
-  <div class="iframe-container">
-    <iframe src="homeimage.html" width="800" height="600" frameborder="0"></iframe>
+
+  <!-- Image Frame Section -->
+  <div style="display:flex;justify-content:center;align-items:center;margin:40px 0;">
+    <div style="border:8px solid #b8860b;border-radius:18px;box-shadow:0 4px 32px rgba(0,0,0,0.18);overflow:hidden;width:70vw;max-width:900px;background:#fff;">
+      <img src='Images/home.jpg' alt='Framed Banner' style='width:100%;height:auto;display:block;'>
+    </div>
   </div>
 </body>
 </html>
