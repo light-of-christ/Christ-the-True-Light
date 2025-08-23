@@ -202,9 +202,7 @@
     .review-card.glow {
       box-shadow: 0 0 32px 8px #26738D, 0 1px 0 #1F7592 inset;
     }
-    /* End Reviews Section */
-
-    /* Begin T-Shirt Ad Section */
+    
     .promo-banner {
       background-color: #14424a;
       color: #fff;
@@ -241,16 +239,15 @@
       color: #fff;
       transform: translateY(-2px);
     }
-    /* End T-Shirt Ad Section */
   </style>
 </head>
 <body>
-  <div id="header"></div>
+<div id="header-container"></div>
 <script>
   fetch('header.html')
     .then(response => response.text())
     .then(html => {
-      document.getElementById('tshirtad-container').innerHTML = html;
+      document.getElementById('header-container').innerHTML = html;
     });
 </script>
   <div class="banner-img" style="max-width:900px; margin:2rem auto 0 auto;">
@@ -300,16 +297,14 @@
       </ul>
       <p>All downloads on my website are completely free of charge. However, donations are greatly appreciated to support my work. Whether you're a student or a seasoned philosophy enthusiast, you'll discover valuable insights woven into everyday articles.</p>
    <body>
-
-      <div id="header"></div>
+<div id="homesection2-container"></div>
 <script>
   fetch('homesection2.html')
     .then(response => response.text())
     .then(html => {
-      document.getElementById('header').innerHTML = html;
+      document.getElementById('homesection2-container').innerHTML = html;
     });
 </script>
-   </body>
       <head>
 
       <html>
