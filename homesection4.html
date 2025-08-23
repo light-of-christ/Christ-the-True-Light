@@ -1,0 +1,137 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: repeating-linear-gradient(
+        135deg,
+        #E7E7E7,
+        #E7E7E7 40px,
+        #E7E7E7 40px,
+        #E7E7E7 80px
+      );t
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1350px;
+      margin: 30px auto; /* Increased from 40px to 60px */
+      padding: 30px;
+      background: #E7E7E7;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 0 #26738D inset;
+      backdrop-filter: blur(2px);
+    }
+    h2 {
+      text-align: center;
+      color: #006064;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 8px #1F7592;
+    }
+       h1 {
+      text-align: center;
+      color: #006064;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 8px #1F7592;
+    }
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .review-card {
+      background: linear-gradient(135deg, #E7E7E7 80%, #E7E7E7 100%);
+      box-shadow: 0 4px 24px rgba(0,96,100,0.12), 0 1px 0 #26738D inset;
+      border-radius: 18px;
+      padding: 32px 24px 24px 24px;
+      flex: 1 1 380px;
+      max-width: 600px;
+      transition: box-shadow 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .review-card:hover {
+      box-shadow: 0 8px 40px 0 #26738D, 0 1px 0 #1F7592 inset;
+      transform: translateY(-6px) scale(1.03);
+      z-index: 2;
+    }
+    .review-card::before {
+      content: "";
+      position: absolute;
+      top: -40px; left: -40px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, #26738D 0%, transparent 70%);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .review-text {
+      font-size: 1.35rem; /* Increased from 1.18rem */
+      color: #37474f;
+      margin-bottom: 18px;
+            font-size: 1.2 rem; /* Increased from 1.05rem */
+
+      line-height: 1.7; /* Slightly increased for readability */
+      text-align: center;
+      text-shadow: 0 1px 0 #E7E7E7;
+    }
+    .review-author {
+      font-weight: 700;
+      color: #006064;
+      text-align: center;
+      font-size: 1.50rem; /* Increased from 1.05rem */
+      margin-top: 8px;
+      letter-spacing: 1px;
+    }
+    .review-card.glow {
+      box-shadow: 0 0 32px 8px #26738D, 0 1px 0 #1F7592 inset;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Mental Health Ministry Reviews</h2>
+    <hr>
+    <div class="reviews">
+      <div class="review-card">
+        <div class="review-text">
+          "Do you have ears to hear? I am a Christian and I have a loved one with schizophrenia. I don't know if there exists another resource like this. It is very easy to read: Suzanne walks you through the text (Matthew, Mark, Luke and John) - you can even follow along in your own bible! but the commentary specifically related to schizophrenia and Jesus' humanity is invaluable. You can find many resources on the physical and emotional sides of schizophrenia, but if you're a Christian, THIS is the information you need. Suzanne has given us a gift to view schizophrenia through a lens no one else is looking through."
+        </div>
+        <div class="review-author">Angela T. - Matthew, Mark, Luke and John</div>
+      </div>
+      <div class="review-card">
+        <div class="review-text">
+          “Suzanne's ministry has truly transformed my faith. I now understand what I have been experiencing. SPIRITUAL GIFTS? Supernatural spiritual gifts? Who knew? Things have gotten so much better for me since I stopped listening to the lies of all of the "Schizophrenic Voices" that have tortured me since my early 20's. I now put my focus into reading the bible and trusting the words written in the pages to continue to answer questions to the things I have seen and heard. Suzanne was right; each one's answers will be revealed by simply reading the bible even if I don't fully understand it yet. I see my life within the pages. Suzannes ministry has given me hope and led me towards recovery from schizophrenia. As she states, "We are not sick!"
+        </div>
+        <div class="review-author">Sarah H.</div>
+      </div>
+    </div>
+    <div class="review-card" style="margin: 40px auto; max-width: 480px;">
+      <div class="review-text">
+        "Maybe a real prophet: Whereas Joyce Myers, Joel Osteen, Benny Hin, and the other Kenneth Copland, and who else? They are the false prophets: JUST SAYING!"
+      </div>
+      <div class="review-author">Josie B. - The Link Between</div>
+    </div>
+  </div>
+       
+  <script>
+    // Add a glowing effect on hover using JS for extra pop
+    document.querySelectorAll('.review-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.classList.add('glow');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.classList.remove('glow');
+      });
+    });
+  </script>
+</body>
