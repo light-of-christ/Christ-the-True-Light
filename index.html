@@ -211,6 +211,12 @@
       margin-bottom: 1.5rem;
       line-height: 1.6;
     }
+       .iframe-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Optional: makes it vertically centered on full page */
+    }
     .promo-btn {
       background-color: #b8860b;
       color: #14424a;
@@ -243,14 +249,8 @@
         document.getElementById('header-container').innerHTML = html;
       });
   </script>
-    <div id="homeimage-container"></div>
-  <script>
-    fetch('homeimage.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('homeimage-container').innerHTML = html;
-      });
-  </script>
-  
+  <div class="iframe-container">
+    <iframe src="homeimage.html" width="800" height="600" frameborder="0"></iframe>
+  </div>
 </body>
 </html>
