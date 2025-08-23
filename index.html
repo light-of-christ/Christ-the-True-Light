@@ -260,18 +260,23 @@
       });
   </script>
 
-  <!-- BANNER IMAGE -->
+
+<div id="homeimage-container"></div>
+
+<script>
+  fetch('homeimage.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to load homeimage.html');
+      }
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById('homeimage-container').innerHTML = html;
+    })
+</script>
 
 
-  <section class="banner" style="display:flex; justify-content:center; align-items:center; margin:2rem 0;">
-  <div class="banner-img">
-    <img src="Images/home.png" alt="Illustration representing the theme of exposing hidden truths">
-    <div class="banner-text">Exposing Hidden Truths</div>
-  </div>
-</section>
-
-
-  <!-- MAIN SECTION -->
   <section style="max-width:900px; margin:2rem auto; background:#E7E7E7; border-radius:16px; box-shadow:0 4px 32px #b8860b22; padding:2rem; color:#1a2a2a;">
       
            <h2 style="color:#154656; margin-bottom:1rem;">Navigating the Intersection of Technology, AI, and Mental Health</h2>
@@ -364,7 +369,6 @@
         document.getElementById('homesection2-container').innerHTML = html;
       });
   </script>
- 
   <div id="footer-container"></div>
   <script>
     fetch('footer.html')
