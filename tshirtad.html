@@ -1,0 +1,89 @@
+<head>
+  <title>Promotion Banner - Raise Awareness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+    background: #BCC9BF;
+    }
+    .promo-banner {
+      position: relative;
+      width: 100vw;
+  height: 0vh;
+  min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    color: #345563;
+    overflow: hidden;
+    background: linear-gradient(120deg, #BCC9BF 60%, #E7E7E7 100%);
+    }
+    .promo-banner::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://i.etsystatic.com/25226789/r/il/01e50b/5530025986/il_fullxfull.5530025986_f7iv.jpg') center 45%/cover no-repeat;
+      opacity: 0.45;
+      z-index: 1;
+    }
+    .promo-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 700px;
+  padding: 1.25rem 2rem;
+    background: rgba(236, 236, 236, 0.7);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    .promo-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .promo-text {
+      font-size: 2.25rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    color: #345563;
+    .promo-btn {
+      display: inline-block;
+    background: #345563;
+    color: #E7E7E7;
+      font-weight: 700;
+      font-size: 2.1rem;
+      padding: 0.85rem 2.5rem;
+      border-radius: 2rem;
+      border: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+    .promo-btn:hover {
+  background: #BCC9BF;
+  color: #345563;
+      transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
+      .promo-title { font-size: 2.5rem; }
+      .promo-content { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="promo-banner">
+    <div class="promo-content">
+      <div class="promo-title">Help Raise Awareness</div>
+      <div class="promo-text">
+        Every shirt tells a story. Join the movement to shine a light on mental health and faith.<br>
+        Wear your message. Inspire hope. Make a difference.
+      </div>
+      <a href="https://christ-the-true-light.printify.me/category/all/1" class="promo-btn">Shop Now</a>
+    </div>
+  </div>
+</body>
