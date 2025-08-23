@@ -254,9 +254,10 @@
   </div>
   <div class="site-title">Christ the True Light</div>
   <nav class="nav">
-    <a href="#" class="active">HOME</a>
+  <a href="index.html" class="active">HOME</a>
     <a href="#">STORE</a>
-    <a href="#">SUBLIMINAL AVATAR</a>
+      <a href="subliminal-avatar.html" class="active">Subliminal Avatar</a>
+
     <a href="#">RELOCATE THE SINNERS</a>
     <a href="#">BLOG</a>
     <a href="#">VOICES OF STRENGTH</a>
@@ -269,5 +270,22 @@
     <input class="search" type="text" placeholder="Search">
     <button class="youtube">YOUTUBE CHANNEL</button>
   </nav>
+<script>
+  // Highlight nav button for current page
+  document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.querySelectorAll('.nav a');
+    var current = window.location.pathname.split('/').pop().toLowerCase();
+    navLinks.forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (href && href.toLowerCase() === current && href !== '#') {
+        link.style.background = '#14424a';
+        link.style.color = '#fff';
+      } else {
+        link.style.background = '';
+        link.style.color = '';
+      }
+    });
+  });
+</script>
 </body>
 </html>
