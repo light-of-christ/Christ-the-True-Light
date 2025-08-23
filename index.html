@@ -6,17 +6,20 @@
   <title>Christ the True Light - Exposing Hidden Truths</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
   <style>
-  
-  
-  
-    
-  
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
       background: #f7f7f7;
       color: #1a2a2a;
     }
+
+    .iframe-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0;
+    }
+
     .topbar {
       background: #14424a;
       color: #fff;
@@ -26,15 +29,7 @@
       gap: 2rem;
       font-size: 1rem;
     }
-    .topbar span {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .topbar .check {
-      color: #fff;
-      font-size: 1.1em;
-    }
+
     .site-title {
       text-align: center;
       font-size: 3rem;
@@ -44,213 +39,9 @@
       text-shadow: 0 2px 8px #b8860b44;
       letter-spacing: 2px;
     }
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .nav a, .nav button {
-      background: none;
-      border: none;
-      color: #14424a;
-      font-size: 1.1rem;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-    .nav a.active, .nav button.active {
-      background: #14424a;
-      color: #fff;
-    }
-    .nav button, .nav .youtube {
-      background: #14424a;
-      color: #fff;
-      font-weight: 700;
-      margin-left: 1rem;
-    }
-    .nav .search {
-      background: #fff;
-      color: #14424a;
-      border: 1px solid #b8860b44;
-      border-radius: 6px;
-      padding: 0.5rem 1rem;
-      margin-left: 1rem;
-    }
-    .banner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 2rem 0;
-    }
-  
-   
-    .banner-text {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-shadow: 0 2px 16px #000, 0 0px 32px #b8860b;
-      letter-spacing: 2px;
-      text-align: center;
-    }
-    @media (max-width: 900px) {
-      .site-title { font-size: 2rem; }
-      .banner-img { height: 200px; }
-      .banner-text { font-size: 1.5rem; }
-    }
-    /* Begin Reviews Section */
-    .container {
-      max-width: 1350px;
-      margin: 30px auto;
-      padding: 30px;
-      background: #E7E7E7;
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 0 #26738D inset;
-      backdrop-filter: blur(2px);
-    }
-    h2 {
-      text-align: center;
-      color: #006064;
-      font-size: 2.6rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-      text-shadow: 0 2px 8px #1F7592;
-    }
-      h3 {
-      color: #006064;
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-      text-shadow: 0 2px 8px #1F7592;
-    }
-        h4 {
-      color: #006064;
-      font-size: 1.2rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-    }
-    h1 {
-      text-align: center;
-      color: #006064;
-      font-size: 2.6rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-      text-shadow: 0 2px 8px #1F7592;
-    }
-    .reviews {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 32px;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
-    .review-card {
-      background: linear-gradient(135deg, #E7E7E7 80%, #E7E7E7 100%);
-      box-shadow: 0 4px 24px rgba(0,96,100,0.12), 0 1px 0 #26738D inset;
-      border-radius: 18px;
-      padding: 32px 24px 24px 24px;
-      flex: 1 1 380px;
-      max-width: 600px;
-      transition: box-shadow 0.3s, transform 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .review-card:hover {
-      box-shadow: 0 8px 40px 0 #26738D, 0 1px 0 #1F7592 inset;
-      transform: translateY(-6px) scale(1.03);
-      z-index: 2;
-    }
-    .review-card::before {
-      content: "";
-      position: absolute;
-      top: -40px; left: -40px;
-      width: 120px; height: 120px;
-      background: radial-gradient(circle, #26738D 0%, transparent 70%);
-      opacity: 0.18;
-      pointer-events: none;
-    }
-    .review-text {
-      font-size: 1.35rem;
-      color: #37474f;
-      margin-bottom: 18px;
-      font-size: 1.2 rem;
-      line-height: 1.7;
-      text-align: center;
-      text-shadow: 0 1px 0 #E7E7E7;
-    }
-    .review-author {
-      font-weight: 700;
-      color: #006064;
-      text-align: center;
-      font-size: 1.50rem;
-      margin-top: 8px;
-      letter-spacing: 1px;
-    }
-    .review-card.glow {
-      box-shadow: 0 0 32px 8px #26738D, 0 1px 0 #1F7592 inset;
-    }
-    
-    .promo-banner {
-      background-color: #14424a;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-      margin: 2rem 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
-    }
-       .iframe-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 35vh; /* Optional: makes it vertically centered on full page */
-    }
-    .promo-title {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #b8860b;
-    }
-    .promo-text {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-    .promo-btn {
-      background-color: #b8860b;
-      color: #14424a;
-      padding: 0.8rem 2rem;
-      font-size: 1.1rem;
-      font-weight: 500;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .promo-btn:hover {
-      background-color: #14424a;
-      color: #fff;
-      transform: translateY(-2px);
-    }
+
+    /* Add more CSS cleanup as needed based on your content */
   </style>
-  
->
 </head>
 
 <body>
@@ -264,32 +55,43 @@
       });
   </script>
 
-  <!-- Image Frame Section -->
-  <div style="display:flex;justify-content:center;align-items:center;margin:40px 0;">
+
+  <!-- Banner and Heading Centered -->
+  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;margin:40px 0;">
     <div style="border:8px solid #b8860b;border-radius:18px;box-shadow: 0 8px 40px 0 #b8860b; overflow:hidden;width:70vw;max-width:900px;background:#fff;">
-      <img src='Images/home.jpg' alt='Framed Banner' style='width:100%;height:auto;display:block;'>
+      <div style="position:relative;width:100%;height:auto;">
+        <img src='Images/home.jpg' alt='Framed Banner' style='width:100%;height:auto;display:block;'>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:2.5vw;font-family:'Montserrat',Arial,sans-serif;font-weight:500;text-align:center;text-shadow:0 2px 16px #000,0 0px 32px #b8860b;letter-spacing:1px;width:90%;pointer-events:none;">
+           <h3 style="color:#fff; margin:2rem 0 1rem 0; text-shadow:0 2px 8px #b8860b44;">Exposing Hidden Truths</h3>
+
+          
+        </div>
+      </div>
     </div>
-    <body>
-  <div class="section-flex">
-    <div class="study-card">
-      <h2 style="color:#14424a; margin-bottom:1rem;">Navigating the Intersection of Technology, AI, and Mental Health</h2>
-      
-      <strong><h3>What Lies Beneath Our Increasingly Digital World</h3><strong
-      <p>We stand at a pivotal moment in history, experiencing the unprecedented evolution of technology and artificial intelligence (AI). Yet, as we advance toward innovation, a subtle battle unfolds beneath the surface—a conflict that intertwines technology, faith, spirituality, and mental health.</p>
+  <h2 style="color:#14424a; margin:2rem 0 1rem 0; text-shadow:0 2px 8px #b8860b44;">Navigating the Intersection of Technology, AI, and Mental Health</h2>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+  <h3 style="color:#14424a; margin:2rem 0 1rem 0; text-shadow:0 2px 8px #b8860b44;">What Lies Beneath Our Increasingly Digital World</h3>
+    <p>We stand at a pivotal moment in history, experiencing the unprecedented evolution of technology and artificial intelligence (AI)...</p>
       <p>Some perceive the strides in AI and technology as revolutionary. Yet, these advances introduce unexamined repercussions in mental health, our understanding of prophecy, and, indeed, spirituality itself. This battle is more than an abstract philosophical discourse; it is deeply rooted in the real experiences and challenges faced by individuals, society, and even faith itself. Within this complex website is a vast pool of substantiation, or evidence, that must be navigated carefully.</p>
       <p>On my website, a network of <span style="color:#26738D;text-decoration:underline;">blue links</span> serves as an educational arsenal. These clickable resources direct you to intricate theses, research papers, scriptural expositions, and technological investigations. They illuminate the hidden truths behind everyday occurrences and questions. By clicking through these references, you’ll uncover resources helping to connect the dots that otherwise remain unseen.</p>
       <p>But before we connect these dots, we must first explore the facades and foundations of the dual subjects at hand.</p>
       <hr>
-      <strong><h3>Technology and AI's Role in Prophecy & Daily Life</h3></strong>
+  <h3 style="color:#14424a; margin:2rem 0 1rem 0; text-shadow:0 2px 8px #b8860b44;">Technology and AI's Role in Prophecy & Daily Life</h3>
+
       <p>At its core, technology aims to enhance human efficiency. Its explosive growth into areas like artificial intelligence, brain-computer interfacing, and advanced data analytics facilitates capabilities that were unimaginable just decades ago. These innovations help predict consumer behaviors, automate industries, and even save lives.</p>
       <p>But technology enters deeply spiritual waters when we consider systems like AI being tasked with replicating human intent, thought, and decision-making. Technology encroaches further when AI counselors surface in mental health domains or when chips interact directly with the human brain.</p>
       <p>The ethical dilemma broadens when considering “targeted individuals” in the mental-health narrative (those alleging technological harassment). The mainstream medical community frequently attributes accounts of controlling technology or voices in the mind to conditions like schizophrenia. And yet, deeper explorations suggest that such experiences may resonate closer to biblical prophecy rather than technological manipulation.</p>
       <p>My website offers free downloadable papers designed to enhance your critical thinking. Explore insights into how technology and science have historically been sought to be used to shape and influence human perception.</p>
       <a href="#" style="color:#26738D;text-decoration:underline;display:block;margin:8px 0;">History Of Technology And Science To Control The Human Mind (PDF, 175.5 KB, 184 downloads)</a>
       <hr>
-      <strong><h3>The Ethical Fine Line</h3></strong>
+  <h3 style="color:#14424a; margin:2rem 0 1rem 0; text-shadow:0 2px 8px #b8860b44;">The Ethical Fine Line</h3>
+
       <p>Innovations in brain-computer interfaces (BCIs) and cutting-edge AI might help paralyzed individuals gain agency over their environment. On one side, companies like Neuralink publicize technologies that create mobility where none exists. On the other, however, the cost is measured in millions of animal lives lost during experimentation.</p>
-      <p><h4>This points to broader questions:</h4></p>
+  <h4 style="color:#14424a; margin:2rem 0 1rem 0;">This points to broader questions: The Ethical Fine Line</h4>
+
       <ul>
         <li>Are we aware of the true costs of technological advancement?</li>
         <li>How do these intersect with acts of carelessness, or worse, deception under secular science disguised as compassion?</li>
@@ -297,22 +99,25 @@
       </ul>
       <p>Genesis 2 tells us that all creation—from humans to animals—is derived from the dust of the earth. To tread so heavily on living creation is to misinterpret the spiritual relationship between ourselves and God’s gifts.</p>
       <hr>
-      <strong><h3>Mental Health, AI, and Spiritual Experience</h3></strong>
-      <p><h3>Schizophrenia and Religious Stigma</h3></p>
+  <h3 style="color:#14424a; margin:2rem 0 1rem 0; text-shadow:0 2px 8px #b8860b44;">Mental Health, AI, and Spiritual Experience</h3>
+  <h4 style="color:#14424a; margin:2rem 0 1rem 0;">Schizophrenia and Religious Stigma</h4>
+
         <p>For centuries, mental health challenges such as schizophrenia have been labeled as medical diagnoses, defined by symptoms like auditory hallucinations or grandiose beliefs. Modern therapies often ignore one significant aspect of psychosis for many sufferers—that their experiences align with historical accounts of divine encounters or spiritual warfare.</p>
       <p>In the Mental Health section of my blog, a featured article delves into these thought-provoking controversies, encouraging readers to reflect on relatable Biblical narratives like Jesus’ 40 days of solitude. During this pivotal period, as described in Matthew 4, Christ Himself encountered a tempting voice. If such events were to occur in today’s context, would Jesus face the stigma of being labeled schizophrenic? Interestingly, some scientific perspectives suggest He might.</p>
       <a href="#" style="color:#26738D;text-decoration:underline;display:block;margin:8px 0;">The Role Of Psychotic Disorders In Religious History (PDF, 1.7 MB, 195 downloads)</a>
       <hr>
-      <strong><h4>Targeted Individuals and Manipulation Claims</h4></strong>
+  <h4 style="color:#14424a; margin:2rem 0 1rem 0;">Targeted Individuals and Manipulation Claims</h4>
+
+      <strong><h4></h4></strong>
       <p>Modern fears surrounding technology, such as “voice-to-skull technology”, highlight the fragile intersection between emerging tech and mental health. Those affected report hearing invasive, controlling voices or enduring persistent harassment, experiences that are often dismissed by society as unfounded or labeled as schizophrenia when brought to medical professionals.</p>
       <a href="#" style="color:#26738D;text-decoration:underline;display:block;margin:8px 0;">V 2 K And Electronic Harassment Psychotronic Cyber (PDF, 438.9 KB, 178 downloads)</a>
       <p>What if, instead, these experiences signify a spiritual disruption—a prophetic message? What if they warn of an emerging system or technology, not designed to aid humanity but to erode its independence and resilience?</p>
       <p>2 Thessalonians 2 warns of "The Man of Sin" manifesting when humanity becomes its own idol—in this context, through its creations in advanced AI. Today’s “connected” AI tools place most decisions into algorithmic "hands," but at what cost? Shall we allow algorithmic influence into the most divine spaces of our spirit and mental clarity, failing to exhaust the ethical questions AI raises?</p>
       <p>Find links across my pages leading to scientific PDF downloads explaining surveillance-based technologies some claim can warp moral frameworks unnoticed.</p>
       <hr>
-      <strong><h3>Encouraging Self-Education</h3></strong>
+  <h3 style="color:#14424a; margin:2rem 0 1rem 0; text-shadow:0 2px 8px #b8860b44;">Encouraging Self-Education</h3>
       <p>Through meticulously placed blue links, continual visitors are reminded of one thing constantly on this platform—that understanding requires active participation. Truth, knowledge, and revelation necessitate time and willingness; these tools, integrated deeply within Christ the True Light, serve as a beacon for seekers to test evidence without blindly consuming theories.</p>
-      <strong><h4>Actionable Tips for Readers</h4></strong>
+  <h4 style="color:#14424a; margin:2rem 0 1rem 0;">Actionable Tips for Readers</h4>
       <ul>
         <li>Explore with Intention: Click links the "blue links". Analyze how perspectives on technology fuel cultural, mental, and spiritual conflict.</li>
         <li>Take Notes as You Study: Each scientific document featured is worth reflection before assumptions align solely to conspiracy theories or stigma. Contrast research with biblical passages.</li>
